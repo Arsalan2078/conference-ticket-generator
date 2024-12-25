@@ -1,0 +1,14 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+}
+
+#root {
+  height: inherit;
+
+  display: flex;
+  flex-direction: column;
+}

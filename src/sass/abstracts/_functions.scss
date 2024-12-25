@@ -1,0 +1,15 @@
+@use "./breakpoints";
+
+// EXPECTS REM TO WORK PROPERLY
+@function generate-clamp(
+  $value-min,
+  $value-max,
+  $width-min: breakpoints.$bp-mobile,
+  $width-max: breakpoints.$bp-desktop
+) {
+  $slope: calc(($value-max - $value-min) / ($width-max - $width-min));
+  $y-axis-intersection: $value-min - ($slope * $width-min);
+  $preferred-value: calc(#{$y-axis-intersection} + #{$slope} * 100vw);
+
+  @return clamp($value-min, $preferred-value, $value-max);
+}

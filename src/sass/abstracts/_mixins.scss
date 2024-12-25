@@ -1,0 +1,8 @@
+@mixin generate-root-vars($map) {
+  $prefix: map-get($map, "prefix");
+  $values: map-get($map, "values");
+
+  @each $key, $value in $values {
+    --#{$prefix}-#{$key}: #{$value};
+  }
+}
