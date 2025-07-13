@@ -9,6 +9,10 @@ export default function App() {
 
       <p>The quick brown fox jumps over the lazy dog.</p>
 
+      <button>Generate My Ticket</button>
+
+      <input type="email" name="" id="" placeholder="example@email.com"/>
+
       <Icon icon="github" />
     </div>
   );

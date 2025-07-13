@@ -5,6 +5,79 @@
   letter-spacing: $ls;
 }
 
+// typography mixins
+@mixin text-preset-1 {
+  @include font-styles(
+    var(--fw-extra-bold),
+    var(--fs-2xl),
+    var(--lh-110),
+    var(--ls-tightest)
+  );
+}
+
+@mixin text-preset-2 {
+  @include font-styles(
+    var(--fw-bold),
+    var(--fs-xl),
+    var(--lh-110),
+    var(--ls-tightest)
+  );
+}
+
+@mixin text-preset-3 {
+  @include font-styles(
+    var(--fw-bold),
+    var(--fs-lg),
+    var(--lh-110),
+    var(--ls-tightest)
+  );
+}
+
+@mixin text-preset-4 {
+  @include font-styles(
+    var(--fw-medium),
+    var(--fs-rg),
+    var(--lh-120),
+    var(--ls-tighterer)
+  );
+}
+
+@mixin text-preset-5 {
+  @include font-styles(
+    var(--fw-medium),
+    var(--fs-sm),
+    var(--lh-110),
+    var(--ls-tighterer)
+  );
+}
+
+@mixin text-preset-5-extra-bold {
+  @include font-styles(
+    var(--fw-extra-bold),
+    var(--fs-sm),
+    var(--lh-110),
+    var(--ls-tighter)
+  );
+}
+
+@mixin text-preset-6 {
+  @include font-styles(
+    var(--fw-medium),
+    var(--fs-xs),
+    var(--lh-120),
+    var(--ls-none)
+  );
+}
+
+@mixin text-preset-7 {
+  @include font-styles(
+    var(--fw-regular),
+    var(--fs-2xs),
+    var(--lh-120),
+    var(--ls-tight)
+  );
+}
+
 // media queries mixins
 @mixin screen-tablet {
   @media screen and (min-width: 48rem) {

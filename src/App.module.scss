@@ -10,6 +10,71 @@
   color: var(--text-color);
 }
 
+// button styles
+.app button {
+  border-radius: var(--rds-12);
+  padding: var(--spc-16);
+
+  cursor: pointer;
+
+  --bg-color: rgba(var(--clr-orange-500));
+  --text-color: rgb(var(--clr-neutral-900));
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  @include mixins.text-preset-5-extra-bold;
+
+  transition: 
+    background-color var(--transition), 
+    color var(--transition),
+    box-shadow var(--transition);
+
+  &:hover,
+  &:active {
+    --bg-color: rgb(var(--clr-orange-700));
+  }
+
+  &:focus {
+    box-shadow: 
+      0 0 0 0.1875rem black, 
+      0 0 0 0.25rem white;
+  }
+}
+
+// input styles
+.app input {
+  border-radius: var(--rds-12);
+  padding: var(--spc-16);
+
+  --border-color: rgb(var(--clr-neutral-500));
+  --bg-opacity: 0.08;
+  --bg-color: rgb(var(--clr-neutral-0), var(--bg-opacity));
+
+  border: 0.0625rem solid var(--border-color);
+  background-color: var(--bg-color);
+
+  @include mixins.text-preset-6;
+
+  transition: 
+    border-color var(--transition), 
+    background-color var(--transition),
+    box-shadow var(--transition);
+
+  &:hover {
+    --bg-opacity: 0.2;
+  }
+
+  &:focus {
+    box-shadow: 
+      0 0 0 0.1875rem rgb(var(--clr-neutral-900)),
+      0 0 0 0.3125rem rgb(var(--neutral-500));
+  }
+
+  &:invalid {
+    --border-color: rgb(var(--clr-orange-500));
+  }
+}
+
 @include mixins.screen-tablet {
   .app {
     --bg-image: url("/background-tablet.png");
