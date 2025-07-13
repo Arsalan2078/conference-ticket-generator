@@ -11,7 +11,9 @@ export default function App() {
 
       <button>Generate My Ticket</button>
 
-      <input type="email" name="" id="" placeholder="example@email.com"/>
+      <input type="text" name="" id="" value="Benedict Camper" />
+      <input type="email" name="" id="" placeholder="example@email.com" />
+      <input type="text" name="" id="" placeholder="@yourusername" />
 
       <Icon icon="github" />
     </div>

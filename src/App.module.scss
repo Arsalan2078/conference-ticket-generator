@@ -8,70 +8,76 @@
 
   background: var(--bg-image) bottom / cover no-repeat fixed;
   color: var(--text-color);
-}
 
-// button styles
-.app button {
-  border-radius: var(--rds-12);
-  padding: var(--spc-16);
+  // app button styles
+  button {
+    border-radius: var(--rds-12);
+    padding: var(--spc-16);
 
-  cursor: pointer;
+    cursor: pointer;
 
-  --bg-color: rgba(var(--clr-orange-500));
-  --text-color: rgb(var(--clr-neutral-900));
-  background-color: var(--bg-color);
-  color: var(--text-color);
+    --bg-color: rgba(var(--clr-orange-500));
+    --text-color: rgb(var(--clr-neutral-900));
+    background-color: var(--bg-color);
+    color: var(--text-color);
 
-  @include mixins.text-preset-5-extra-bold;
+    @include mixins.text-preset-5-extra-bold;
 
-  transition: 
-    background-color var(--transition), 
-    color var(--transition),
-    box-shadow var(--transition);
+    transition: 
+      background-color var(--transition), 
+      color var(--transition),
+      box-shadow var(--transition);
 
-  &:hover,
-  &:active {
-    --bg-color: rgb(var(--clr-orange-700));
+    &:hover,
+    &:active {
+      --bg-color: rgb(var(--clr-orange-700));
+    }
+
+    &:focus {
+      box-shadow: 
+        0 0 0 0.1875rem black, 
+        0 0 0 0.25rem white;
+    }
   }
 
-  &:focus {
-    box-shadow: 
-      0 0 0 0.1875rem black, 
-      0 0 0 0.25rem white;
-  }
-}
+  // app input styles
+  input {
+    border-radius: var(--rds-12);
+    padding: var(--spc-16);
 
-// input styles
-.app input {
-  border-radius: var(--rds-12);
-  padding: var(--spc-16);
+    --border-color: rgb(var(--clr-neutral-500));
+    --bg-opacity: 0.08;
+    --bg-color: rgb(var(--clr-neutral-0), var(--bg-opacity));
 
-  --border-color: rgb(var(--clr-neutral-500));
-  --bg-opacity: 0.08;
-  --bg-color: rgb(var(--clr-neutral-0), var(--bg-opacity));
+    border: 0.0625rem solid var(--border-color);
+    background-color: var(--bg-color);
 
-  border: 0.0625rem solid var(--border-color);
-  background-color: var(--bg-color);
+    @include mixins.text-preset-6;
 
-  @include mixins.text-preset-6;
+    transition: 
+      border-color var(--transition), 
+      background-color var(--transition),
+      box-shadow var(--transition);
 
-  transition: 
-    border-color var(--transition), 
-    background-color var(--transition),
-    box-shadow var(--transition);
+    &:hover {
+      --bg-opacity: 0.2;
+    }
 
-  &:hover {
-    --bg-opacity: 0.2;
-  }
+    &:focus {
+      box-shadow: 
+        0 0 0 0.1875rem rgb(var(--clr-neutral-900)),
+        0 0 0 0.3125rem rgb(var(--neutral-500));
+    }
 
-  &:focus {
-    box-shadow: 
-      0 0 0 0.1875rem rgb(var(--clr-neutral-900)),
-      0 0 0 0.3125rem rgb(var(--neutral-500));
+    &:invalid {
+      --border-color: rgb(var(--clr-orange-500));
+    }
   }
 
-  &:invalid {
-    --border-color: rgb(var(--clr-orange-500));
+  // app label styles
+  label {
+    @include mixins.text-preset-5;
+    color: rgb(var(--neutral-0));
   }
 }
 
