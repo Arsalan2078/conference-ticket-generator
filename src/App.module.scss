@@ -2,4 +2,22 @@
 
 .app {
   min-height: 100svh;
+
+  --bg-image: url("/background-mobile.png");
+  --text-color: rgb(var(--clr-neutral-300));
+
+  background: var(--bg-image) bottom / cover no-repeat fixed;
+  color: var(--text-color);
+}
+
+@include mixins.screen-tablet {
+  .app {
+    --bg-image: url("/background-tablet.png");
+  }
+}
+
+@include mixins.screen-desktop {
+  .app {
+    --bg-image: url("/background-desktop.png");
+  }
 }

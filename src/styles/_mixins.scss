@@ -4,3 +4,16 @@
   line-height: $lh;
   letter-spacing: $ls;
 }
+
+// media queries mixins
+@mixin screen-tablet {
+  @media screen and (min-width: 48rem) {
+    @content;
+  }
+}
+
+@mixin screen-desktop {
+  @media screen and (min-width: 80rem) {
+    @content;
+  }
+}
