@@ -67,7 +67,7 @@
     &:focus {
       box-shadow: 
         0 0 0 0.1875rem rgb(var(--clr-neutral-900)),
-        0 0 0 0.3125rem rgb(var(--neutral-500));
+        0 0 0 0.3125rem rgb(var(--clr-neutral-500));
     }
 
     &:invalid {
