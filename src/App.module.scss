@@ -1,6 +1,7 @@
 @use "./styles/mixins";
 
 .app {
+  padding: var(--spc-16);
   min-height: 100svh;
 
   --bg-image: url("/background-mobile.png");

@@ -1,6 +1,7 @@
 import classes from "./App.module.scss";
 import Icon from "./components/Icon";
 import Logo from "./components/Logo";
+import Ticket from "./components/Ticket";
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
 
       <p>The quick brown fox jumps over the lazy dog.</p>
 
+      <Ticket />
       <button>Generate My Ticket</button>
 
       <input type="text" name="" id="" value="Benedict Camper" />

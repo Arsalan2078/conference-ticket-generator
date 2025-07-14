@@ -1,0 +1,82 @@
+@use "../styles/mixins";
+
+.ticket {
+  display: flex;
+  justify-content: space-between;
+
+  padding: var(--spc-16);
+  width: min(100%, 37.5rem);
+  aspect-ratio: 343 / 160; 
+  
+  background: url("/pattern-ticket.svg") center / contain no-repeat;
+
+  @include mixins.text-preset-6;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  gap: var(--spc-12);
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spc-08);
+
+    div:first-child {
+      @include mixins.text-preset-2;
+      color: rgb(var(--clr-neutral-0));
+    }
+  }
+}
+
+.client {
+  display: flex;
+  align-items: center;
+  gap: var(--spc-12);
+
+  img {
+    border-radius: var(--rds-8);
+    width: 2.8125rem;
+    aspect-ratio: 1;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spc-04);
+
+    div:first-child {
+      @include mixins.text-preset-3;
+      color: rgb(var(--clr-neutral-0));
+    }
+
+    div:last-child {
+      display: flex;
+      align-items: center;
+      gap: var(--spc-04) ;
+
+      div:last-child {
+        gap: var(--spc-04);
+      }
+    }
+  }
+}
+
+.right {
+  display: flex;
+}
+
+.number {
+  align-self: center;
+ 
+  color: rgb(var(--clr-neutral-500));
+
+  writing-mode: vertical-lr;
+  @include mixins.text-preset-3;
+}
